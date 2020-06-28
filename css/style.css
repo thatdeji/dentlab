@@ -1,0 +1,133 @@
+/*Custom Variables*/
+:root {
+  --primary-color: #0052FF;
+  --text-color-light: #5B5B5B;
+  --text-color-bold: #202020;
+  --light-color: #F9F9F9;
+  --cream-color: #E5E5E5;
+  --animate-delay: 0.5s;
+}
+/*General style*/
+body {
+  background: #FEFEFE;
+  font-family: 'Muli', sans-serif;
+}
+body, html {
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color-bold);
+}
+a, p, li {
+  color: var(--text-color-light);
+}
+li {
+  font-size: 16px;
+}
+a:hover {
+  color: var(--primary-color);
+}
+img {
+  object-fit: cover;
+}
+/*Utility Classes*/
+.active {
+  color: var(--primary-color);
+}
+.form-control {
+  border-radius: 0;
+}
+label {
+  font-size: 16px;
+  font-weight: 700;
+}
+/******************************************************************************************************
+                                      BUTTONS
+*******************************************************************************************************/
+.btn {
+  border-radius: 0px;
+  font-size: 1rem;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.btn-info {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.btn-info:hover {
+  background: var(--primary-color);
+}
+/******************************************************************************************************
+                                      NAVIGATION BAR
+*******************************************************************************************************/
+header {
+  background: #FEFEFE;
+}
+.header-scroll {
+  box-shadow: 2px 6px 10px rgba(229, 229, 229, 0.37);
+}
+/******************************************************************************************************
+                                      HERO
+*******************************************************************************************************/
+#hero{
+  padding: 8rem 0 0;
+}
+.hero-img {
+  position: relative;
+}
+/******************************************************************************************************
+                                      SERVICES
+*******************************************************************************************************/
+#services li {
+  position: relative;
+  list-style: none;
+}
+.check{
+  height: 15px;
+}
+/******************************************************************************************************
+                                      TESTIMONIAL
+*******************************************************************************************************/
+#testimonial {
+  background: var(--light-color);
+}
+#testimonial .fa {
+  color: var(--primary-color);
+}
+/******************************************************************************************************
+                                      BLOG
+*******************************************************************************************************/
+.blog-img {
+  height: 5rem;
+}
+/******************************************************************************************************
+                                      FOOTER
+*******************************************************************************************************/
+footer {
+  background: var(--primary-color);
+}
+footer p, footer .fa {
+  color: white;
+}
+
+/******************************************************************************************************
+                                      MEDIA QUERIES
+*******************************************************************************************************/
+@media screen and (max-width: 1125px) {
+ 
+}
+@media screen and (max-width: 992px) {
+ 
+}
+
+@media screen and (max-width: 768px) {
+ 
+}
+@media screen and (max-width: 600px) {
+  #hero {
+    padding: 3.4rem 0 0;
+  }
+}
