@@ -40,9 +40,12 @@ function navCheck(entries) {
   // Checks if section is in view
   if(entry.isIntersecting) {
     // Clears the active class from all links 
-    navLinks.forEach(navLink => {
-    navLink.classList.remove('active');
-  });
+    for(i = 0; i < navLinks.length; i++)  {
+      navLinks[i].classList.remove('active');
+    }    
+  //   navLinks.forEach(navLink => {
+  //   navLink.classList.remove('active');
+  // });
   //Adds the class active to the link whose section is in view
     activeAnchor.classList.add('active');
   }
