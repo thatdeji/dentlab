@@ -1,5 +1,7 @@
 //UI VARS
 const header = document.querySelector('header');
+      navLinks = document.querySelectorAll('.nav-link'),
+      sections = document.querySelectorAll('section');
  //Animate on Scroll 
 AOS.init({
        easing: 'ease-in-out-sine',
@@ -19,4 +21,34 @@ window.addEventListener('scroll', (e) => {
     header.classList.remove('header-scroll');
     // mainNav.classList.remove('main-nav-scroll');
   }
+})
+
+// Set threshold for the observer
+const options = {
+    threshold: 0.5
+};
+
+// Create a new intersection observer
+let observer = new IntersectionObserver(navCheck, options);
+
+function navCheck(entries) {
+  entries.forEach(entry => {
+  // Get classname of the section in view
+  const idName = entry.target.id;
+  // Gets the links tied to its section
+  const activeAnchor = document.querySelector(`[data-page=${idName}]`)
+  // Checks if section is in view
+  if(entry.isIntersecting) {
+    // Clears the active class from all links 
+    navLinks.forEach(navLink => {
+    navLink.classList.remove('active');
+  });
+  //Adds the class active to the link whose section is in view
+    activeAnchor.classList.add('active');
+  }
+  });
+}
+sections.forEach(section => {
+  // Observes all section element on the page
+  observer.observe(section);
 })

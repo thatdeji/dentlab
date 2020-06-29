@@ -12,6 +12,9 @@ body {
   background: #FEFEFE;
   font-family: 'Muli', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body, html {
   overflow-x: hidden;
 }
