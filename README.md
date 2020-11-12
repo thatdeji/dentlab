@@ -1,2 +1,3 @@
 # dentlab
-https://medicalgroupd.netlify.app/
+
+Informational wensite for a dentist. 
